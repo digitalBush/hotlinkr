@@ -19,7 +19,7 @@
 			fn.call(elms[i]);		
 	}
 	
-	var isIE=(/msie/i.test(navigator.userAgent) && !/opera/i.test(navigator.userAgent) );
+	var isIE=(/msie/i.test(navigator.userAgent) && !/opera/i.test(navigator.userAgent));
 	
 	function chooseRandomly(obj,seed) {
 		var index = -1, item = null;
@@ -77,7 +77,6 @@
 		fail:function() {
 			window.location.href = "http://farm4.static.flickr.com/3102/2780516431_28b7d23cfc.jpg";
 		}
-		
 	};
 	
 	if( isIE ) {
@@ -95,7 +94,7 @@
 		};
 	}
 	
-	(window.addEventListener ? window.addEventListener : window.attachEvent)(isIE()?"onload":"load",function(){
+	(window.addEventListener ? window.addEventListener : window.attachEvent)(isIE?"onload":"load",function(){
 		body=document.body?document.body:document.getElementsByTagName("body")[0];
 		(chooseRandomly( types, type === "random" ? undefined : type.split(',') ))();
 	}, false);
