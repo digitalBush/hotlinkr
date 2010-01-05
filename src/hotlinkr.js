@@ -31,7 +31,8 @@
 			}		
 		}
 		index=Math.floor(Math.random() * seed.length);
-		if(console && console.log)console.log("hotlinkr >> type = " + seed[index]);
+		if(typeof(console) !== 'undefined' && typeof(console.log) !== 'undefined')
+			console.log("hotlinkr >> type = " + seed[index]);
 		return obj[seed[index]];
 	}
 		
