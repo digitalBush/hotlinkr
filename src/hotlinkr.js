@@ -95,8 +95,8 @@
 		};
 	}
 	
-	(window.addEventListener ? window.addEventListener : window.attachEvent)(isIE?"onload":"load",function(){
-		body=document.body?document.body:document.getElementsByTagName("body")[0];
+	(window.addEventListener || window.attachEvent)(isIE?"onload":"load",function(){
+		body=document.body;
 		(chooseRandomly( types, type === "random" ? undefined : type.split(',') ))();
 	}, false);
-})("random","digitalbush.com");
+})("flip","digitalbush.com");
