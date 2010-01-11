@@ -68,10 +68,10 @@
 		},
 		flip:function(){
 			if( !isIE ) {
-				body.setAttribute('style',body.getAttribute('style') + "; -moz-transform: scaleY(-1);-webkit-transform: scaleY(-1);transform: scaleY(-1);filter: FlipV;");
+				body.setAttribute('style',body.getAttribute('style') + ";-moz-transform: scaleY(-1);-webkit-transform: scaleY(-1);transform: scaleY(-1);");
 			} else {
 				doTags("img",function() {
-					this.setAttribute('style', this.getAttribute('style') + "; -moz-transform: scaleY(-1);-webkit-transform: scaleY(-1);transform: scaleY(-1);filter: FlipV;");
+					this.setAttribute('style', this.getAttribute('style') + ";filter: FlipV;");
 				});
 			}
 		},
