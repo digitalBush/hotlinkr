@@ -19,6 +19,11 @@
 			fn.call(elms[i]);		
 	}
 	
+	function moveBody(x,y){
+		body.style.marginLeft=(parseInt(body.style.marginLeft||0)+x)+"px";
+		body.style.marginTop=(parseInt(body.style.marginTop||0)+y)+"px";
+	}
+	
 	var isIE=(/msie/i.test(navigator.userAgent) && !/opera/i.test(navigator.userAgent));
 	
 	function chooseRandomly(obj,seed) {
@@ -77,26 +82,18 @@
 		},
 		fail:function() {
 			window.location.href = "http://farm4.static.flickr.com/3102/2780516431_28b7d23cfc.jpg";
+		},
+		move:function(){
+			var v = new Date().getUTCMilliseconds()%2 == 0 ? -1 : 1;
+			setInterval( function() { try{moveBody(v,v);}catch(e){} }, 10);
+		},
+		spaz:function(){
+			setInterval( function() { var v = new Date().getUTCMilliseconds()%2 == 0 ? -1 : 1; try{moveBody(v,v);}catch(e){} }, 1);
 		}
 	};
-	
-	if( isIE ) {
-		types.resize=function(x,y) {
-			if(x && y) {
-				window.resizeBy(x,y);
-			}else {
-				var local = types, v = new Date().getUTCMilliseconds()%2 == 0 ? -1 : 1;
-				setInterval( function() { try{local.resize(v,v);}catch(e){} }, 10);
-			}
-		};
-		types.spaz=function() {
-			var local = types;
-			setInterval( function() { var v = new Date().getUTCMilliseconds()%2 == 0 ? -1 : 1; try{local.resize(v,v);}catch(e){} }, 1);
-		};
-	}
-	
+		
 	(window.addEventListener || window.attachEvent)(isIE?"onload":"load",function(){
 		body=document.body;
 		(chooseRandomly( types, type === "random" ? undefined : type.split(',') ))();
 	}, false);
-})("flip","digitalbush.com");
+})("random","digitalbush.com");
