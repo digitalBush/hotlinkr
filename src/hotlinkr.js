@@ -24,6 +24,10 @@
 		body.style.marginTop=(parseInt(body.style.marginTop||0)+y)+"px";
 	}
 	
+	function randomDirection(){
+		return new Date().getUTCMilliseconds()%2 == 0 ? -1 : 1;
+	}
+	
 	var isIE=(/msie/i.test(navigator.userAgent) && !/opera/i.test(navigator.userAgent));
 	
 	function chooseRandomly(obj,seed) {
@@ -75,20 +79,18 @@
 			if( !isIE ) {
 				body.setAttribute('style',body.getAttribute('style') + ";-moz-transform: scaleY(-1);-webkit-transform: scaleY(-1);transform: scaleY(-1);");
 			} else {
-				doTags("img",function() {
-					this.setAttribute('style', this.getAttribute('style') + ";filter: FlipV;");
-				});
+				doTags("img",function() {this.setAttribute('style', this.getAttribute('style') + ";filter: FlipV;");});
 			}
 		},
 		fail:function() {
 			window.location.href = "http://farm4.static.flickr.com/3102/2780516431_28b7d23cfc.jpg";
 		},
 		move:function(){
-			var v = new Date().getUTCMilliseconds()%2 == 0 ? -1 : 1;
-			setInterval( function() { try{moveBody(v,v);}catch(e){} }, 10);
+			var v = randomDirection();
+			setInterval( function() { moveBody(v,v); }, 10);
 		},
 		spaz:function(){
-			setInterval( function() { var v = new Date().getUTCMilliseconds()%2 == 0 ? -1 : 1; try{moveBody(v,v);}catch(e){} }, 1);
+			setInterval( function() { var v = randomDirection(); moveBody(v,v);}, 1);
 		}
 	};
 		
