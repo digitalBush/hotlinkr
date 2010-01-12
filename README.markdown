@@ -4,6 +4,7 @@ This project is designed as a replacement javascript file to serve up in place o
 
 This script is not malicious and only generates superficial annoyances. It can disfigure a website which has linked to it in the following ways:
 
+* random - Random selection of one of the below.
 * alert - Generates a simple javascript alert() popup which kindly asks the site to stop hotlinking.
 * redirect - Redirects to another location.
 * link - Alters all links on the page to point to another location.
@@ -15,7 +16,10 @@ This script is not malicious and only generates superficial annoyances. It can d
 * title - Changes the title of the page.
 * hasselhoff - Changes all images on the site to reference a picture of David Hasselhoff with puppies.
 * overlay - Overlays a transparent div on top of the entires page to prevent interaction with the site.
-* flip - Flips all images upside down on the site.
+* flip - Flips all images upside down on the site in IE.  Flips the entire page on other browsers.
+* fail - Redirects to a picture of FAIL.
+* move - Picks a direction and moves the margin body in that direction.
+* spaz - Jiggles the body margin.
 
 Installation
 ------------
