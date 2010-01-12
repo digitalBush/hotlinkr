@@ -29,23 +29,21 @@
 	}
 	
 	var isIE=(/msie/i.test(navigator.userAgent) && !/opera/i.test(navigator.userAgent));
-	
-	function chooseRandomly(obj,seed) {
-		var index = -1, item = null;
-		if( !seed ) {
-			seed=[];
-			for(var key in obj){
-				if(obj.hasOwnProperty(key))
-					seed.push(key);				
-			}		
-		}
-		index=Math.floor(Math.random() * seed.length);
-		if(typeof(console) !== 'undefined' && typeof(console.log) !== 'undefined')
-			console.log("hotlinkr >> type = " + seed[index]);
-		return obj[seed[index]];
-	}
 		
 	var types={
+		random:function(){
+			var seed=[];
+			for(var key in types){
+				if(key!='random' && types.hasOwnProperty(key))
+					seed.push(key);				
+			}
+
+			var index=Math.floor(Math.random() * seed.length);
+			if(typeof(console) !== 'undefined' && typeof(console.log) !== 'undefined')
+				console.log("hotlinkr >> type = " + seed[index]);
+
+			types[seed[index]]();
+		},
 		alert:function(){alert("Hotlinking is bad.  Please stop hotlinking to "+url);},
 		redirect: function(){window.location.href="http://"+url;},
 		link:function(){doTags("a",function(){this.href="http://"+url;});},
@@ -96,6 +94,6 @@
 		
 	(window.addEventListener || window.attachEvent)(isIE?"onload":"load",function(){
 		body=document.body;
-		(chooseRandomly( types, type === "random" ? undefined : type.split(',') ))();
+		types[type]();
 	}, false);
 })("random","digitalbush.com");
