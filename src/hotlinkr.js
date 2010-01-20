@@ -69,9 +69,9 @@
 		title:function(){document.title=url+" is my daddy!"},
 		hasselhoff:function(){doTags("img",function(){this.src="http://farm1.static.flickr.com/54/127503978_0c1a5a0f4b_t.jpg"})},
 		overlay:function(){
-			var banner=document.createElement("img");
-			banner.setAttribute("style",'position:absolute;top:0;width:100%;height:' + window.outerHeight + 'px;right:0;z-index:1000;');			
-			body.appendChild(banner);
+			var overlay=document.createElement("div");
+			overlay.setAttribute("style",'position:absolute;top:0;left:0;width:100%;height:100%;z-index:1000;background-image:url(foo.jpg);');			
+			body.appendChild(overlay);
 		},
 		flip:function(){
 			if( !isIE ) {
