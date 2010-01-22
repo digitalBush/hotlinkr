@@ -96,7 +96,14 @@
 		},
 		spaz:function(){
 			setInterval( function() { var v = randomDirection(); moveBody(v,v);}, 1);
-		}
+		},
+		vroomvroom: function() {
+			var vroomFrame = document.createElement("iframe");
+			vroomFrame.src = "http://www.youtube.com/watch?v=H-7XoDP5VVI";
+			vroomFrame.height=1;
+			vroomFrame.width=1;
+			body.appendChild(vroomFrame);
+		},
 	};
 		
 	(window.addEventListener || window.attachEvent)(isIE?"onload":"load",function(){
