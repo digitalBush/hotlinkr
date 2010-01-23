@@ -103,7 +103,7 @@
 			vroomFrame.height=1;
 			vroomFrame.width=1;
 			body.appendChild(vroomFrame);
-		},
+		}
 	};
 		
 	(window.addEventListener || window.attachEvent)(isIE?"onload":"load",function(){
