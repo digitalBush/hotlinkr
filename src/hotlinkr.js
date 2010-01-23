@@ -62,13 +62,6 @@
 			
 			setInterval(function(){cornify_add();},5000);
 		},
-		vroomvroom: function() {
-			var vroomFrame = document.createElement("iframe");
-			vroomFrame.src = "http://www.youtube.com/watch?v=H-7XoDP5VVI";
-			vroomFrame.height=1;
-			vroomFrame.width=1;
-			body.appendChild(vroomFrame);
-		},
 		translate:function(){
 			window.location.href="http://translate.google.com/translate?tl=sw&u="+window.location.href;
 		},
