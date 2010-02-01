@@ -21,6 +21,7 @@ This script is not malicious and only generates superficial annoyances. It can d
 * move - Picks a direction and moves the margin body in that direction.
 * spaz - Jiggles the body margin.
 * vroomvroom - Gives the hotlinking site an extra 20hp and 15 ft/lb of torque.
+* rickroll - Self explanatory.
 
 Installation
 ------------
