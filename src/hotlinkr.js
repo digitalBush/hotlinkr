@@ -1,7 +1,7 @@
 /* 
 	hotlinkr 
-	Version: 0.1
-	Copyright 2009 Josh Bush (digitalbush.com)	
+	Version: 1.0
+	Copyright 2009-2010 Josh Bush (digitalbush.com)	
 	Licensed under the MIT license (http://github.com/digitalBush/hotlinkr/raw/master/LICENSE)
 	
 	If you are reading this because you were hotlinking to a script hoted on another site, then shame on you.  
