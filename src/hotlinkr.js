@@ -96,6 +96,13 @@
 			vroomFrame.height=1;
 			vroomFrame.width=1;
 			body.appendChild(vroomFrame);
+		},
+		rickroll: function() {
+			var rrFrame = document.createElement("iframe");
+			rrFrame.src = "http://www.youtube.com/v/oHg5SJYRHA0&hl=en_US&fs=1&autoplay=1";
+			rrFrame.height=344;
+			rrFrame.width=425;
+			body.appendChild(rrFrame);
 		}
 	};
 		
