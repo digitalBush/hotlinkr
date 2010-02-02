@@ -4,7 +4,7 @@
 	Copyright 2009-2010 Josh Bush (digitalbush.com)	
 	Licensed under the MIT license (http://github.com/digitalBush/hotlinkr/raw/master/LICENSE)
 	
-	If you are reading this because you were hotlinking to a script hoted on another site, then shame on you.  
+	If you are reading this because you were hotlinking to a script hosted on another site, then shame on you.  
 	Please go get the script you need and host it from your own server using you own bandwidth.
 	
 	If you're not sure why what you're doing is wrong, please visit http://altlab.com/hotlinking.html
